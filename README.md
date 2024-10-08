@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tapestry of Taste - README</title>
+    
     
 </head>
 <body>
@@ -85,9 +85,9 @@ npm start
 <h2 id="contact">Contact</h2>
 <p>For any inquiries, please contact:</p>
 <ul>
-    <li><strong>Name:</strong> Your Name</li>
-    <li><strong>Email:</strong> your.email@example.com</li>
-    <li><strong>Website:</strong> <a href="http://yourwebsite.com">Your Website</a></li>
+    <li><strong>Name:</strong>Lesego Khaole</li>
+    <li><strong>Email:</strong>lesegokhaole@icloud.com or st10455441@imconnect.edu.za</li>
+    
 </ul>
 
 <footer>
