@@ -90,6 +90,9 @@ npm start
     
 </ul>
 
+<h3>Youtube Video:</h3>
+<a href="https://youtu.be/DjHkxlJLvjI?si=zykDOMeunRVmbLHi">https://youtu.be/DjHkxlJLvjI?si=zykDOMeunRVmbLHi</a>
+
 <footer>
     <p>&copy; 2023 The Tapestry of Taste. All rights reserved.</p>
 </footer>
