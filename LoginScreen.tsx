@@ -36,7 +36,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       resizeMode="stretch" 
     >
           <Button 
-            title="Chef" 
+            title="Chef"
             onPress={() => setSelectedRole('Chef')}
             color={selectedRole === 'Chef' ? 'rgb(55, 255, 0)' : 'rgba(255, 255, 255, 0.7)'} 
           />

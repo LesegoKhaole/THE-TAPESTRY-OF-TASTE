@@ -34,18 +34,18 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const renderMenuItem = ({ item }: { item: MenuItem }) => (
     <View style={styles.menuItem}>
       <Text style={styles.dishName}>{item.dishName}</Text>
-      <Text>{item.description}</Text>
-      <Text>Course: {item.course}</Text>
-      <Text>Price: ${item.price.toFixed(2)}</Text>
-      <Button title="Remove" onPress={() => removeMenuItem(item.id)} />
-      <Button title="Edit" onPress={() => navigation.navigate('EditMenu', { item })} />
-      <Button title="Select" onPress={() => navigation.navigate('MenuDetail', { item })} />
+      <Text style={styles.description}>{item.description}</Text>
+      <Text style={styles.course}>Course: {item.course}</Text>
+      <Text style={styles.price}>Price: ${item.price.toFixed(2)}</Text>
+      <Button title="Remove" color={'#ffffff'} onPress={() => removeMenuItem(item.id)} />
+      <Button title="Edit" color={'#ffffff'} onPress={() => navigation.navigate('EditMenu', { item })} />
+      <Button title="Select" color={'#ffffff'} onPress={() => navigation.navigate('MenuDetail', { item })} />
     </View>
   );
 
   return (
     <ImageBackground 
-      source={require('./assets/R10.jpg')} 
+      source={require('./assets/R.jpeg')} 
       style={styles.background}
       resizeMode="cover" 
     >
@@ -118,6 +118,10 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: 'center',
+    borderWidth:5, 
+    shadowOpacity:1,
+    shadowColor:'#032c30',
+    borderColor:'#4a2200',
   },
   container: {
     padding: 20,
@@ -136,37 +140,61 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 50,
     alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#0dcf03',
+    borderWidth: 3,
+    borderColor: '#4a2200',
     top: 0, 
   },
   container2: {
-    backgroundColor: 'rgb(255, 145, 0)', 
+    backgroundColor: 'rgb(227, 129, 0)', 
     padding: 10,
     width: "100%",
     height: 'auto',
     borderRadius: 10,
     alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#0dcf03',
+    borderWidth: 3,
+    borderColor: '#4a2200',
     bottom: '1%',
     position: 'relative'
   },
   menuItem: {
     marginVertical: 10,
     padding: 10,
-    borderWidth: 1,
-    borderColor: '#ccc',
+    borderWidth: 3,
+    borderColor: '#4a2200',
     borderRadius: 10,
+    shadowOpacity: 1,
+    shadowColor: '#032c30',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#d6720f',
     marginBottom: 20,
   },
   dishName: {
-    color: '#006607',
+    color: '#00fff7',
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+
+  description: {
+    color: '#ccff00',
     fontWeight: 'bold',
     fontSize: 16,
+    marginTop:5,
   },
+
+  course: {
+    color: '#e7fafa',
+    fontWeight: 'bold',
+    fontSize: 18,
+    marginTop:5,
+  },
+
+  price: {
+    color: '#55ff00',
+    fontWeight: 'bold',
+    fontSize: 22,
+    marginTop:5,
+  },
+
   courseButton: {
     backgroundColor: 'rgb(55, 255, 0)',
     padding: 10,

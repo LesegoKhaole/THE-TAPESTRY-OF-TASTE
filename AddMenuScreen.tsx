@@ -1,6 +1,6 @@
 // src/components/AddMenuScreen.tsx
 import React, { useState, useContext } from 'react';
-import { View, TextInput, Button, Alert, StyleSheet, Modal, FlatList, TouchableOpacity, Text } from 'react-native';
+import { View, TextInput, Button, Alert, StyleSheet, Modal, FlatList, TouchableOpacity, Text, ImageBackground } from 'react-native';
 import { MenuItem } from './types';
 import { MenuContext } from './App';
 
@@ -31,8 +31,14 @@ const AddMenuScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   };
 
   return (
+
+    <ImageBackground 
+      source={require('./assets/R.jpeg')} 
+      style={styles.background}
+      resizeMode="cover" 
+    >
     <View style={styles.container}>
-      <TextInput placeholder="Dish Name" onChangeText={setDishName} style={styles.input} />
+      <TextInput placeholder="Dish Name"  onChangeText={setDishName} style={styles.input} />
       <TextInput placeholder="Description" onChangeText={setDescription} style={styles.input} />
       <TextInput placeholder="Price" onChangeText={setPrice} keyboardType="numeric" style={styles.input} />
       <TouchableOpacity style={styles.picker} onPress={() => setModalVisible(true)}>
@@ -60,16 +66,26 @@ const AddMenuScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
           />
         </View>
       </Modal>
-
-      <Button title="Add Menu Item" onPress={addMenuItem} />
+      <View style={styles.container1}>
+      <Button title="Add Menu Item" color={'#ffffff'} onPress={addMenuItem} />
+      </View>
     </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+
+  background: {
+    flex: 1,
+    justifyContent: 'center',
+    borderWidth:5, 
+    shadowOpacity:1,
+    shadowColor:'#032c30',
+    borderColor:'#4a2200',
+  },
   container: {
     padding: 20,
-    backgroundColor: '#e0f7fa',
     flex: 1,
     alignItems: 'center',
   },
@@ -93,7 +109,7 @@ const styles = StyleSheet.create({
   },
   pickerText: {
     padding: 10,
-    color: '#003366',
+    color: '#ffffff',
   },
   modalView: {
     margin: 20,
@@ -106,16 +122,27 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 0.25,
+    
     shadowRadius: 4,
     elevation: 5,
   },
   modalItem: {
     padding: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: '#e6d9d9',
     width: '100%',
     textAlign: 'center',
+  },
+  container1: {
+    backgroundColor: 'rgb(255, 145, 0)', 
+    padding: 10,
+    width:'auto',
+    height: 60,
+    borderRadius: 50,
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: '#4a2200',
+    top: 0, 
   },
 });
 
