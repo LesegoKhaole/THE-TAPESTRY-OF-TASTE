@@ -4,51 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Tapestry of Taste - README</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        h2 {
-            color: #333;
-        }
-        h3 {
-            color: #555;
-        }
-        pre {
-            background-color: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        code {
-            background-color: #f9f9f9;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        .features, .capabilities, .disadvantages {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+    
 </head>
 <body>
 
