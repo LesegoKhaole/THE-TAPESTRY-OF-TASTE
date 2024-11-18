@@ -1,6 +1,6 @@
 // src/components/EditMenuScreen.tsx
 import React, { useState, useContext } from 'react';
-import { View, TextInput, Button, Alert, StyleSheet, Modal, FlatList, TouchableOpacity, Text } from 'react-native';
+import { View, TextInput, Button, Alert, StyleSheet, Modal, FlatList, TouchableOpacity,ImageBackground, Text } from 'react-native';
 import { MenuContext } from './App';
 import { MenuItem } from './types';
 
@@ -33,7 +33,16 @@ const EditMenuScreen: React.FC<{ route: any; navigation: any }> = ({ route, navi
     navigation.navigate('Home');
   };
 
+  
+
   return (
+
+    <ImageBackground 
+      source={require('./assets/R.jpeg')} 
+      style={styles.background}
+      resizeMode="cover" 
+    >
+
     <View style={styles.container}>
       <TextInput 
         placeholder="Dish Name" 
@@ -57,8 +66,9 @@ const EditMenuScreen: React.FC<{ route: any; navigation: any }> = ({ route, navi
         keyboardType="numeric" 
         style={styles.input} 
       />
-      <Button title="Save Changes" onPress={saveChanges} />
-
+      <View style={styles.container1}>
+      <Button title="Save Changes" color={'#ffff'} onPress={saveChanges} />
+      </View>
       {/* Modal for Course Selection */}
       <Modal
         animationType="slide"
@@ -82,29 +92,43 @@ const EditMenuScreen: React.FC<{ route: any; navigation: any }> = ({ route, navi
         </View>
       </Modal>
     </View>
+
+    </ImageBackground>
   );
+  
 };
 
 const styles = StyleSheet.create({
+
+  background: {
+    flex: 1,
+    justifyContent: 'center',
+    borderWidth:5, 
+    shadowOpacity:1,
+    shadowColor:'#032c30',
+    borderColor:'#4a2200',
+  },
+
   container: {
     padding: 20,
-    backgroundColor: '#e0f7fa',
     flex: 1,
     alignItems: 'center',
   },
   input: {
     height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    borderColor:'#ffff',
+    borderWidth: 3,
     marginBottom: 20,
     paddingLeft: 10,
     width: '80%',
     borderRadius: 5,
+    fontWeight:'600',
+
   },
   picker: {
     height: 50,
-    borderColor: 'gray',
-    borderWidth: 1,
+    borderColor:'#ffff',
+    borderWidth: 3,
     justifyContent: 'center',
     marginBottom: 20,
     width: '80%',
@@ -116,7 +140,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#bd7e00',
     borderRadius: 20,
     padding: 35,
     alignItems: 'center',
@@ -135,7 +159,22 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ccc',
     width: '100%',
     textAlign: 'center',
+    color:'#fff',
+    fontWeight:'600',
   },
+
+  container1: {
+    backgroundColor: 'rgb(255, 145, 0)', 
+    padding: 10,
+    width: 200,
+    height: 60,
+    borderRadius: 50,
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: '#4a2200',
+    
+  },
+
 });
 
 export default EditMenuScreen;

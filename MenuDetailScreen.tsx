@@ -27,7 +27,7 @@ const MenuDetailScreen = ({ route, navigation }: any) => {
     >
     <View style={styles.container}>
       <ImageBackground 
-      source={require('./assets/R.jpeg')} 
+      source={require('./assets/R1.webp')} 
       style={styles.background}
       resizeMode="cover" 
     ><View style={styles.menuItem}>
@@ -37,7 +37,9 @@ const MenuDetailScreen = ({ route, navigation }: any) => {
       <Text style={styles.text}>Price: ${item.price.toFixed(2)}</Text>
       </View>
       </ImageBackground>
-      <Button title="Back to Filter" onPress={() => navigation.navigate('Filter')} />
+      <View style={styles.container1}>
+      <Button title="Back to Filter" color={'#ffffff'} onPress={() => navigation.navigate('Filter')} />
+      </View>
     </View>
     </ImageBackground>
   );
@@ -49,31 +51,52 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     
+    
   },
 
 
   background: {
     flex: 1,
     justifyContent: 'center',
-    
+    borderWidth: 3,
+    borderColor: '#4a2200',
   },
 
   container: {
-    padding: 20,
+    padding: 8,
     alignItems: 'center',
     flex: 1,
+    borderWidth: 3,
+    borderColor: '#4a2200',
   },
+
+  container1: {
+    backgroundColor: 'rgb(255, 145, 0)', 
+    padding: 10,
+    width: 200,
+    borderRadius: 50,
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: '#4a2200',
+    top: 0, 
+  },
+  
+
   text: {
-    color: '#003366',
-    fontSize: 18,
+    color: '#76b7f7',
+    fontSize: 20,
     marginVertical: 20,
+    fontFamily:'Open Sans ',
+    fontWeight:'700',
+    textShadowRadius:23,
+    textShadowColor:'#ff0303',
   },
 
   menuItem: {
     marginVertical: 10,
     padding: 100,
     borderWidth: 3,
-    borderColor: '#ccc',
+    borderColor: '#4a2200',
     borderRadius: 10,
     alignItems: 'center',
     

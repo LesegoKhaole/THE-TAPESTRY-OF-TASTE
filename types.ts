@@ -13,7 +13,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 export type MenuStackParamList = {
   Login: undefined;
   Home: undefined;
-  AddMenu: { menuItems: MenuItem[] }; // Define the params expected for AddMenu
+  AddMenu: { menuItems: MenuItem[] }; // This Defines the params expected for AddMenu
   MenuDetail: undefined;
   Filter: undefined;
 };

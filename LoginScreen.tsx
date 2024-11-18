@@ -1,10 +1,11 @@
 // src/components/LoginScreen.tsx
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, ImageBackground, Text, Alert, Image } from 'react-native';
+import { View, TextInput, Button, StyleSheet, ImageBackground, Alert,  } from 'react-native';
 
 const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [selectedRole, setSelectedRole] = useState<'Chef' | 'Customer' | null>(null);
+  
 
   const handleLogin = () => {
     const trimmedPassword = password.trim();
@@ -57,22 +58,26 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
 
 
         </View>
-
-        <View style={styles.container}>
-        <TextInput
+        <ImageBackground 
+      source={require('./assets/R2.jpg')} 
+      style={styles.backgroundInput}
+      resizeMode="stretch">
+        <TextInput 
           placeholder="Password" 
-          secureTextEntry 
+          secureTextEntry //hides what the user inputs(password)
           onChangeText={setPassword} 
           style={styles.input} 
+       
         />
         <View style={styles.buttonContainer2}>
         <Button 
           title="Login" 
           onPress={handleLogin} 
-          color={'rgb(55, 255, 0)'} 
+          color={'rgb(255, 255, 255)'} 
         />
         </View>
-      </View>
+      
+      </ImageBackground>
     </ImageBackground>
   );
 };
@@ -120,6 +125,8 @@ const styles = StyleSheet.create({
       
 },
 
+
+
 buttonbackground1:{
   flex: 1,
   justifyContent: 'center',
@@ -152,17 +159,30 @@ buttonbackground2:{
   paddingHorizontal: 40,
 },
 
+backgroundInput: {
+  flex: 1,
+  justifyContent: 'center',
+  marginLeft:3, 
+  marginRight:4,
+  borderWidth:5, 
+  shadowOpacity:1,
+  shadowColor:'#032c30',
+  borderColor:'#4a2200',
+  width:'100%',
+  
+},
+
 buttonContainer2: {
-  marginRight:5,
-  top:-10,
-  backgroundColor: 'rgb(109, 64, 6)', 
+  backgroundColor: 'rgb(255, 123, 0)', 
     padding: 10,
     width:'48%',
     borderRadius: 50,
     alignItems:'center',
+    marginLeft:100,
+    marginTop:75,
     borderWidth:5, 
     shadowOpacity:1,
-    shadowColor:'#032c30',
+    shadowColor:'#ffffff',
     borderColor:'#4a2200',
 },
 
@@ -180,13 +200,13 @@ buttonContainer2: {
     height: 40,
     borderWidth:5, 
     shadowOpacity:1,
-    shadowColor:'#032c30',
+    shadowColor:'#ffffff',
     borderColor:'#4a2200',
     marginBottom: 20,
     paddingLeft: 10,
     width: '100%',
     borderRadius: 5,
-    color: 'rgb(0, 225, 255)',
+    color: 'rgb(255, 111, 0)',
     fontSize: 25,
     
   },
