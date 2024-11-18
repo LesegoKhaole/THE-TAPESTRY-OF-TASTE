@@ -3,99 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
+    <title>The Tapestry of Taste Mobile App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #007bff;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.8em;
+            text-align: center;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
-<h1>The Tapestry of Taste Mobile App</h1>
-<p>The Tapestry of Taste app is designed to enhance the dining experience by providing users with an intuitive interface to explore, filter, and manage menu items from a variety of courses. This React Native application allows users to view detailed information about dishes, manage their selections, and gain insights into total revenue and average pricing.</p>
+    <h1>The Tapestry of Taste Mobile App</h1>
+    <p>The Tapestry of Taste app is designed to enhance the dining experience by providing users with an intuitive interface to explore, filter, and manage menu items from a variety of courses. This React Native application allows users to view detailed information about dishes, manage their selections, and gain insights into total revenue and average pricing.</p>
 
-<h2>Table of Contents</h2>
-<ul>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#capabilities-and-advantages">Capabilities and Advantages</a></li>
-    <li><a href="#disabilities-and-disadvantages">Disabilities and Disadvantages</a></li>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
+    <div class="section">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li>Features</li>
+            <li>Capabilities and Advantages</li>
+            <li>Disabilities and Disadvantages</li>
+            <li>Installation</li>
+            <li>Usage</li>
+            <li>Contributing</li>
+            <li>License</li>
+            <li>Contact</li>
+        </ul>
+    </div>
 
-<div class="features">
-    <h2 id="features">Features</h2>
-    <ul>
-        <li><strong>Dynamic Menu Management:</strong> Users can easily add, edit, or remove menu items, ensuring the menu is always up-to-date.</li>
-        <li><strong>Search and Filter Options:</strong> The app allows users to search for specific dishes and filter menu items by course, making it easy to find exactly what they want.</li>
-        <li><strong>Revenue Tracking:</strong> Provides insights into total revenue and average pricing, helping business owners make informed decisions.</li>
-    </ul>
-</div>
+    <div class="section">
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Dynamic Menu Management:</strong> Users can easily add, edit, or remove menu items, ensuring the menu is always up-to-date.</li>
+            <li><strong>Search and Filter Options:</strong> The app allows users to search for specific dishes and filter menu items by course, making it easy to find exactly what they want.</li>
+            <li><strong>Revenue Tracking:</strong> Provides insights into total revenue and average pricing, helping business owners make informed decisions.</li>
+        </ul>
+    </div>
 
-<div class="capabilities">
-    <h2 id="capabilities-and-advantages">Capabilities and Advantages</h2>
-    <ul>
-        <li><strong>User-Friendly Interface:</strong> The app is designed with a clean and intuitive interface, making it easy for users of all ages to navigate through the menu.</li>
-        <li><strong>Cross-Platform Compatibility:</strong> Built with React Native, the app runs seamlessly on both iOS and Android devices, reaching a wider audience.</li>
-        <li><strong>Real-Time Updates:</strong> Changes made to the menu are reflected in real-time, ensuring that users always see the latest information.</li>
-        <li><strong>Visual Appeal:</strong> The use of background images and styled components enhances user engagement and promotes the brand's aesthetic.</li>
-    </ul>
-</div>
+    <div class="section">
+        <h2>Capabilities and Advantages</h2>
+        <ul>
+            <li><strong>User-Friendly Interface:</strong> The app is designed with a clean and intuitive interface, making it easy for users of all ages to navigate through the menu.</li>
+            <li><strong>Cross-Platform Compatibility:</strong> Built with React Native, the app runs seamlessly on both iOS and Android devices, reaching a wider audience.</li>
+            <li><strong>Real-Time Updates:</strong> Changes made to the menu are reflected in real-time, ensuring that users always see the latest information.</li>
+            <li><strong>Visual Appeal:</strong> The use of background images and styled components enhances user engagement and promotes the brand's aesthetic.</li>
+        </ul>
+    </div>
 
-<div class="disadvantages">
-    <h2 id="disabilities-and-disadvantages">Disabilities and Disadvantages</h2>
-    <ul>
-        <li><strong>Limited Offline Functionality:</strong> The app requires an internet connection for full functionality, which might limit usability in areas with poor connectivity.</li>
-        <li><strong>Initial Setup Complexity:</strong> New users might find the initial setup process, including adding menu items and configuring settings, a bit overwhelming.</li>
-        <li><strong>Performance on Older Devices:</strong> The app may experience performance issues on older mobile devices due to the graphical elements and real-time data processing.</li>
-    </ul>
-</div>
+    <div class="section">
+        <h2>Disabilities and Disadvantages</h2>
+        <ul>
+            <li><strong>Limited Offline Functionality:</strong> The app requires an internet connection for full functionality, which might limit usability in areas with poor connectivity.</li>
+            <li><strong>Initial Setup Complexity:</strong> New users might find the initial setup process, including adding menu items and configuring settings, a bit overwhelming.</li>
+            <li><strong>Performance on Older Devices:</strong> The app may experience performance issues on older mobile devices due to the graphical elements and real-time data processing.</li>
+        </ul>
+    </div>
 
-<h2 id="installation">Installation</h2>
-<p>To set up the project locally, follow these instructions:</p>
-<pre><code># Clone the repository
-git clone https://github.com/username/repo-name.git
+    <div class="section">
+        <h2>Key Changes</h2>
+        <ul>
+            <li>Added a new function <code>calculateAveragePricePerCourse()</code> that groups the menu items by course and calculates the average price for each course.</li>
+            <li>Updated the <code>calculateAveragePrice()</code> function to calculate the overall average price.</li>
+            <li>In the return statement, added a section to display the overall average price and the average price for each course.</li>
+            <li>Now, the home screen will display the total number of menu items, the total revenue, the overall average price, and the average price for each course.</li>
+        </ul>
+    </div>
 
-# Change to the project directory
-cd repo-name
+    <div class="section">
+        <h2>Installation</h2>
+        <p>To set up the project locally, follow these instructions:</p>
+        <ol>
+            <li>Clone the repository: <code>git clone https://github.com/username/repo-name.git</code></li>
+            <li>Change to the project directory: <code>cd repo-name</code></li>
+            <li>Install dependencies: <code>npm install</code></li>
+            <li>Start the development server: <code>npm start</code></li>
+        </ol>
+    </div>
 
-# Install dependencies
-npm install
+    <div class="section">
+        <h2>Usage</h2>
+        <p>Once the app is installed, you can run it on your mobile device or emulator. The main screen will display the menu, where you can add, edit, or remove items. Use the search bar to find specific dishes, and explore filtering options to narrow down your selections.</p>
+    </div>
 
-# Start the development server
-npm start
-</code></pre>
+    <div class="section">
+        <h2>Contributing</h2>
+        <p>Contributions are welcome! If you would like to contribute to the Tapestry of Taste app, please follow these steps:</p>
+        <ol>
+            <li>Fork the repository.</li>
+            <li>Create your feature branch: <code>git checkout -b feature/YourFeature</code>.</li>
+            <li>Commit your changes: <code>git commit -m 'Add some feature'</code>.</li>
+            <li>Push to the branch: <code>git push origin feature/YourFeature</code>.</li>
+            <li>Open a pull request.</li>
+        </ol>
+    </div>
 
-<h2 id="usage">Usage</h2>
-<p>Once the app is installed, you can run it on your mobile device or emulator. The main screen will display the menu, where you can add, edit, or remove items. Use the search bar to find specific dishes, and explore filtering options to narrow down your selections.</p>
+    <div class="section">
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License. See the LICENSE file for more details.</p>
+    </div>
 
-<h2 id="contributing">Contributing</h2>
-<p>Contributions are welcome! If you would like to contribute to the Tapestry of Taste app, please follow these steps:</p>
-<ol>
-    <li>Fork the repository.</li>
-    <li>Create your feature branch (<code>git checkout -b feature/YourFeature</code>).</li>
-    <li>Commit your changes (<code>git commit -m 'Add some feature'</code>).</li>
-    <li>Push to the branch (<code>git push origin feature/YourFeature</code>).</li>
-    <li>Open a pull request.</li>
-</ol>
+    <div class="section">
+        <h2>Contact</h2>
+        <p>For any inquiries, please contact:</p>
+        <ul>
+            <li><strong>Name:</strong> Lesego Khaole</li>
+            <li><strong>Email:</strong> lesegokhaole@icloud.com or st10455441@imconnect.edu.za</li>
+        </ul>
+    </div>
 
-<h2 id="license">License</h2>
-<p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p>
+    <div class="section">
+        <h2>YouTube Video</h2>
+        <p><a href="https://youtu.be/DjHkxlJLvjI?si=zykDOMeunRVmbLHi">Watch the video here</a>.</p>
+    </div>
 
-<h2 id="contact">Contact</h2>
-<p>For any inquiries, please contact:</p>
-<ul>
-    <li><strong>Name:</strong>Lesego Khaole</li>
-    <li><strong>Email:</strong>lesegokhaole@icloud.com or st10455441@imconnect.edu.za</li>
-    
-</ul>
-
-<h3>Youtube Video:</h3>
-<a href="https://youtu.be/DjHkxlJLvjI?si=zykDOMeunRVmbLHi">https://youtu.be/DjHkxlJLvjI?si=zykDOMeunRVmbLHi</a>
-
-<footer>
-    <p>&copy; 2023 The Tapestry of Taste. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>© 2024 The Tapestry of Taste. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
